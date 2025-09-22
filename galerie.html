@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galerie photos Harmonie Déco : Avant/Après décoration et rangement">
+  <title>Harmonie Déco - Galerie</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo"><img src="images/logo.png" alt="Harmonie Déco"></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="prestations.html">Prestations</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="section">
+  <h1>Galerie Avant / Après</h1>
+  <div class="filters">
+    <button data-type="all" class="btn">Tous</button>
+    <button data-type="maison" class="btn">Maison</button>
+    <button data-type="bureau" class="btn">Bureau</button>
+    <button data-type="professionnel" class="btn">Professionnel</button>
+  </div>
+
+  <div class="gallery-cards">
+    <img src="images/avant1.jpg" alt="Avant" data-type="maison">
+    <img src="images/apres1.jpg" alt="Après" data-type="maison">
+    <img src="images/avant2.jpg" alt="Avant" data-type="bureau">
+    <img src="images/apres2.jpg" alt="Après" data-type="bureau">
+  </div>
+
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content">
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Harmonie Déco - Bretagne</p>
+</footer>
+</body>
+</html>
