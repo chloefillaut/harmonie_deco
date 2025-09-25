@@ -3,11 +3,86 @@
 body { background:#fff; color:#333; line-height:1.6; }
 
 /* Navigation */
+/* Style général navigation */
 header { background:#fff; padding:1em 2em; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100; }
 .nav-links { display:flex; list-style:none; justify-content:flex-end; gap:2em; }
 .nav-links a { text-decoration:none; color:#333; font-weight:600; transition:color 0.3s; }
-.nav-links a:hover { color:#8c5a2b; }
+.nav-links a:hover { color:#8c5a2b; } 
 .logo img { height:50px; }
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: relative;
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none; /* caché par défaut */
+    border-top: 1px solid #ccc;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Animation menu ouvert */
+  .nav-links.show {
+    display: flex;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Hamburger animé */
+  .menu-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
 
 /* Hero */
 .hero { position:relative; min-height:80vh; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; overflow:hidden; }

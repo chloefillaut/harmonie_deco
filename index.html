@@ -29,9 +29,20 @@
 <body>
   <!-- Header / Navigation -->
   <header>
-    <nav>
-      <div class="logo"><img src="images/logo.png" alt="Harmonie Déco"></div>
-      <ul class="nav-links">
+    <nav class="nav-container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Harmonie Déco">
+      </div>
+
+      <!-- Hamburger pour mobile -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Menu classique -->
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="prestations.html">Prestations</a></li>
         <li><a href="galerie.html">Galerie</a></li>

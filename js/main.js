@@ -1,3 +1,11 @@
+const toggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+  toggle.classList.toggle('open');
+});
+
 // Fade-in sections on scroll
 const sections = document.querySelectorAll('.section');
 
