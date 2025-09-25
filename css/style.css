@@ -48,3 +48,24 @@ footer { background:#8c5a2b; color:#fff; padding:2em; text-align:center; }
   .hero h1 { font-size:2em; }
   .apropos-content { flex-direction:column; }
 }
+
+/* Mentions légales */
+.mentions {
+  font-size: 0.9rem;        /* Texte un peu plus petit */
+  color: #555;              /* Gris doux*/
+  line-height: 1.5;         /* Bonne lisibilité */
+  margin-top: 1.5rem;       /* Espacement au-dessus */
+  margin-bottom: 1.5rem;
+  text-align: center;      /* Alignement centrer */
+}
+
+.mentions a {
+  color: #8c6b9e;           /* Violet doux en cohérence avec une déco élégante */
+  text-decoration: none;    /* Pas de soulignement par défaut */
+  font-weight: 500;
+}
+
+.mentions a:hover {
+  text-decoration: underline; /* Apparition du soulignement au survol */
+  color: #6b4b85;             /* Lien un peu plus foncé au survol */
+}
